@@ -6,6 +6,7 @@ import ServiceSection from '../components/Service/ServiceSection'
 const AboutUs = () => {
   return (
     <div>
+      
       <AboutSection />
       <ServiceSection />
       <FaqSection />
