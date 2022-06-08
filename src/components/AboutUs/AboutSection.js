@@ -2,7 +2,7 @@ import React from 'react'
 import home_1_image from '../../img/home1.png'
 const AboutSection = () => {
   return (
-    <div>
+    <div className='About_section'>
       <div className='description'>
         <div className='title'>
           <div className='first-headLine hide'>
