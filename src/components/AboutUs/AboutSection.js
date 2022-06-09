@@ -47,6 +47,7 @@ const About_section = styled.div`
   }
   img {
     width: 34vw;
+    margin: 2rem;
   }
   p {
     color: white;
@@ -56,11 +57,14 @@ const About_section = styled.div`
 
 const ContactUsButton = styled.div`
   text-align: center;
+
   button {
+    font-weight: bold;
     border: 1px solid green;
     background-color: transparent;
     padding: 1rem 2rem;
     border-radius: 2%;
+    font-size: 1rem;
     cursor: pointer;
     transition: all 1s;
     color: white;
