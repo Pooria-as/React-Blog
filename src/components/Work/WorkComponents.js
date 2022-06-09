@@ -1,11 +1,14 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import styled from 'styled-components'
+import { MovieContextStore } from '../../Context/MovieContext'
 
 import athlete from '../../img/athlete-small.png'
 import athlete2 from '../../img/athlete2.png'
 import goodSmall from '../../img/goodtimes-small.png'
 
 const WorkComponents = () => {
+  const movies = useContext(MovieContextStore)
+console.log(movies.Movies)
   return (
     <WorkBaseStyle>
       <Movies>
@@ -40,7 +43,7 @@ const WorkBaseStyle = styled.div`
   }
 
   h1 {
-    color: white;   
+    color: white;
   }
 
   img {
