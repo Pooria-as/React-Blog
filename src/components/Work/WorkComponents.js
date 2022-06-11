@@ -1,32 +1,16 @@
 import React, { useContext } from 'react'
 import styled from 'styled-components'
 import { MovieContextStore } from '../../Context/MovieContext'
-
-import athlete from '../../img/athlete-small.png'
-import athlete2 from '../../img/athlete2.png'
-import goodSmall from '../../img/goodtimes-small.png'
+import Movie from '../Movie/Movie'
 
 const WorkComponents = () => {
   const movies = useContext(MovieContextStore)
-console.log(movies.Movies)
+
   return (
     <WorkBaseStyle>
-      <Movies>
-        <h1>Athlete</h1>
-        <div className='line'></div>
-        <img src={athlete} alt='athlete' />
-      </Movies>
-
-      <Movies>
-        <h1>Good Time</h1>
-        <div className='line'></div>
-        <img src={goodSmall} alt='athlete' />
-      </Movies>
-      <Movies>
-        <h1>Athlete</h1>
-        <div className='line'></div>
-        <img src={athlete2} alt='athlete' />
-      </Movies>
+      {movies.Movies.map(({ id, title, src }) => (
+        <Movie id={id} key={id} title={title} src={src} />
+      ))}
     </WorkBaseStyle>
   )
 }

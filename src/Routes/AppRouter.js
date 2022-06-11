@@ -5,6 +5,7 @@ import Nav from '../components/Nav/Nav'
 
 import AboutUs from '../Pages/AboutUs'
 import ContactUs from '../Pages/ContactUs'
+import SingleWork from '../Pages/SingleWork'
 import Work from '../Pages/Work'
 const AppRouter = () => {
   return (
@@ -15,6 +16,7 @@ const AppRouter = () => {
         <Route path='/About-us' element={<AboutUs />} />
         <Route path='/Contact-us' element={<ContactUs />} />
         <Route path='/Works' element={<Work />} />
+        <Route path='/Work/:id' element={<SingleWork />} />
       </Routes>
     </div>
   )

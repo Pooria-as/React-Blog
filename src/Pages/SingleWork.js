@@ -1,8 +1,8 @@
 import React from 'react'
-import WorkComponents from '../components/Work/WorkComponents'
+import Single from '../components/Single/Single'
 import { motion } from 'framer-motion'
 import { PageAnimation } from '../components/Animate/Animation'
-const Work = () => {
+const SingleWork = () => {
   return (
     <motion.div
       variants={PageAnimation}
@@ -10,9 +10,9 @@ const Work = () => {
       animate='show'
       end='end'
     >
-      <WorkComponents />
+      <Single />
     </motion.div>
   )
 }
 
-export default Work
+export default SingleWork

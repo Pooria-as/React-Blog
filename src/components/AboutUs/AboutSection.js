@@ -1,21 +1,32 @@
 import React from 'react'
 import styled from 'styled-components'
 import home_1_image from '../../img/home1.png'
+import { motion } from 'framer-motion'
 const AboutSection = () => {
+  const Animated = {
+    hidden: { opacity: 0, x: 100 },
+    show: { opacity: 1, transition: { duration: 2 }, x: 0, delayChildren: 0.5 }
+  }
+
   return (
     <About_section>
-      <div className='description'>
+      <motion.div
+        variants={Animated}
+        initial='hidden'
+        animate='show'
+        className='description'
+      >
         <div className='title'>
           <div className='first-headLine hide'>
-            <h2>We Work to make</h2>
+            <motion.h2>We Work to make</motion.h2>
           </div>
           <div className='second-headLine hide'>
-            <h2>
+            <motion.h2>
               Your <span>Dreams</span>
-            </h2>
+            </motion.h2>
           </div>
           <div className='third-headLine hide'>
-            <h2>Come True</h2>
+            <motion.h2>Come True</motion.h2>
           </div>
           <p>
             It is a long established fact that a reader will be distracted by
@@ -25,7 +36,7 @@ const AboutSection = () => {
             <button>Contact us</button>
           </ContactUsButton>
         </div>
-      </div>
+      </motion.div>
       <div className='image'>
         <img src={home_1_image} />
       </div>
